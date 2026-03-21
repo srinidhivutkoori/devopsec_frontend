@@ -1,0 +1,17 @@
+/* App.css
+   Minimal custom styles for the whiteboard application.
+   Most styling is handled by Tailwind utility classes in component files.
+   Only styles that cannot be achieved with Tailwind classes or that
+   apply to specific third-party component overrides are placed here. */
+
+/* React Toastify custom overrides - ensure toasts use the correct font */
+.Toastify__toast {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+}
+
+/* Ensure that whiteboard canvas cursor changes are not overridden by user-agent */
+canvas {
+  /* Prevent default touch scrolling / pinch-zoom on mobile so drawing works */
+  touch-action: none;
+}
